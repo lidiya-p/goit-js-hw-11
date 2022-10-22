@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-wrapper">
+      
+      <form class="search-form" id="search-form">
+        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button class="button" type="submit">Search
+          <svg class="icon icon-search">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
+  <div class="container">
+    <div class="gallery">
+    </div>
+    <button type="button" class="button load-more is-hidden">Load more</button>
+  </div>
+</body>
+
+</html>
+  <button type="button" class="load-more is-hidden">Load more</button>
+</body>
+<script type="module" src="./index.js"></script>
 </html>
